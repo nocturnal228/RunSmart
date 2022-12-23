@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -35,7 +34,7 @@ module.exports = {
         use: [
           "style-loader", // creates style nodes from JS strings
           "css-loader", // translates CSS into CommonJS
-          // "postcss-loader", // Loader for webpack to process CSS with PostCSS
+          "postcss-loader", // Loader for webpack to process CSS with PostCSS
           "sass-loader" // compiles Sass to CSS, using Node Sass by default
         ]
       },
@@ -72,23 +71,5 @@ module.exports = {
       template: "./index.html",
       filename: "index.html"
     }),
-    new BrowserSyncPlugin(
-      // BrowserSync options
-      {
-        // browse to http://localhost:3000/ during development
-        host: 'localhost',
-        port: 8888,
-        // proxy the Webpack Dev Server endpoint
-        // (which should be serving on http://localhost:3100/)
-        // through BrowserSync
-        files: "./index.html"
-      },
-      // plugin options
-      {
-        // prevent BrowserSync from reloading the page
-        // and let Webpack Dev Server take care of this
-        reload: true
-      }
-    )
   ]
 };
