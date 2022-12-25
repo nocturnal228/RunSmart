@@ -316,5 +316,9 @@
     text-transform: uppercase;
     border-radius: 5px;
     border: none; }
+    .consult__btn:hover {
+      background-color: #92010a;
+      -webkit-transition: 0.3s all;
+      transition: 0.3s all; }
 
 /*# sourceMappingURL=style.css.map */
