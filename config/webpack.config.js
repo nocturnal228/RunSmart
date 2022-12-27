@@ -30,35 +30,26 @@ module.exports = {
         }
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          "style-loader", // creates style nodes from JS strings
-          "css-loader", // translates CSS into CommonJS
-          "postcss-loader", // Loader for webpack to process CSS with PostCSS
-          "sass-loader" // compiles Sass to CSS, using Node Sass by default
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
         ]
       },
       {
-        test: /\.(png|svg|jpe?g|gif)$/,
-        use: [
-          {
-            loader: "file-loader", // This will resolves import/require() on a file into a url and emits the file into the output directory.
-            options: {
-              name: "[name].[ext]",
-              outputPath: "assets/"
-            }
-          },
-        ]
+        test: /src\/.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
       },
       {
-        test: /\.html$/,
-        use: {
-          loader: "html-loader",
-          options: {
-            // attrs: ["img:src", ":data-src"],
-            minimize: true
-          }
-        }
+        test: /\.html$/i,
+        loader: "html-loader",
       }
     ]
   },
