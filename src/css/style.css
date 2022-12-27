@@ -261,8 +261,7 @@
 
 .consult {
   background: url("../img/shoe_bg.png");
-  padding-top: 100px;
-  padding-bottom: 108px; }
+  padding: 100px 0; }
   .consult h2 {
     font-style: normal;
     font-weight: 700;
@@ -323,5 +322,65 @@
       background-color: #92010a;
       -webkit-transition: 0.3s all;
       transition: 0.3s all; }
+
+.carousel {
+  padding: 81px 0; }
+  .carousel__slider {
+    width: 750px;
+    margin: 0 auto; }
+  .carousel .slick-prev {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: -66px;
+    border: none;
+    background: none; }
+    .carousel .slick-prev img {
+      width: 31px;
+      height: 50px; }
+  .carousel .slick-next {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: -66px;
+    border: none;
+    background: none; }
+    .carousel .slick-next img {
+      width: 31px;
+      height: 50px; }
+  .carousel .slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    padding-top: 30px;
+    list-style-type: none; }
+    .carousel .slick-dots #slick-slide-control00 {
+      width: 40px;
+      height: 40px;
+      background: #C70101;
+      border: none;
+      border-radius: 50%;
+      color: transparent; }
+    .carousel .slick-dots #slick-slide-control01 {
+      width: 40px;
+      height: 40px;
+      background: #C70101;
+      border: none;
+      border-radius: 50%;
+      color: transparent; }
+    .carousel .slick-dots #slick-slide-control02 {
+      width: 40px;
+      height: 40px;
+      background: #C70101;
+      border: none;
+      border-radius: 50%;
+      color: transparent; }
 
 /*# sourceMappingURL=style.css.map */
