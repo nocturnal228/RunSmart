@@ -38,12 +38,14 @@
         div
             transform: skewX(25deg)
     &__maintenance                                              // AFTER TABS
-        display: flex
+        display: none
         justify-content: center
         row-gap: 19px
         column-gap: 18px
         flex-wrap: wrap
         margin-top: 57px
+        &_active
+            display: flex
     &__block
         width: 300px
         min-height: 442px
@@ -106,19 +108,35 @@
             font-weight: 300
             font-size: 14px
             line-height: 22px
+            margin-bottom: 20px
             color: $site_black
         &__more
+            display: block
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
             margin-top: 10px
             font-style: normal
             font-weight: 500
             font-size: 14px
             line-height: 14px
-            text-align: center
-            a
+            color: $site_red
+            text-decoration: none
+            &:hover
                 color: $site_red
-                text-decoration: none
-                &:hover
-                    text-decoration: underline
+                text-decoration: underline
+        &__back
+            margin-top: 10px
+            font-style: normal
+            font-weight: 500
+            font-size: 14px
+            line-height: 14px
+            color: $site_red
+            text-decoration: none
+            &:hover
+                color: $site_red
+                text-decoration: underline
         &__separator
             margin-top: 17px
             height: 1.8px

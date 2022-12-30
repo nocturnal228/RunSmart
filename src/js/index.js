@@ -23,5 +23,10 @@ $(document).ready(function(){
       }
     ]
   });
+$('ul.catalog__tab').on('click', 'li:not(.catalog__tab_active)', function() {
+  $(this)
+    .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
+    .closest('div.container').find('div.catalog__maintenance').removeClass('catalog_maintenance_active').eq($(this).index()).addClass('catalog_maintenance_active');
+});
 });
             
