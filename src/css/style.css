@@ -430,14 +430,14 @@
     .catalog__tab:hover {
       -webkit-box-shadow: 3px 3px 20px #C70101;
               box-shadow: 3px 3px 20px #C70101; }
-    .catalog__tab:nth-child(1) {
+    .catalog__tab_active {
       color: #FFFFFF;
       background: #C70101;
       border: none; }
     .catalog__tab div {
       -webkit-transform: skewX(25deg);
               transform: skewX(25deg); }
-  .catalog__content {
+  .catalog__maintenance {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -459,7 +459,8 @@
         -ms-flex-direction: column;
             flex-direction: column;
     width: 303px;
-    height: 442px;
+    min-height: 442px;
+    padding: 20px 20px 23px 20px;
     border: 2px solid #E8E8E8;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -467,34 +468,46 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .catalog__block img {
-      margin-top: 15px;
-      width: 140px;
+  .catalog__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .catalog__content img {
+      max-width: 100%;
       height: 200px; }
-    .catalog__block ul {
-      margin-top: 16px; }
-    .catalog__block li {
-      font-style: normal;
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 21px;
-      color: #555555;
-      list-style-type: square;
-      width: 251px; }
-      .catalog__block li::marker {
-        color: #C70101; }
-    .catalog__block:nth-child(3) {
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: start; }
-  .catalog__product {
+  .catalog__list li {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #555555;
+    list-style-type: square;
+    width: 251px; }
+    .catalog__list li::marker {
+      color: #C70101; }
+  .catalog__list:nth-child(3) {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start; }
+  .catalog-item__product {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 25px;
     color: #0D0D0D;
     margin-top: 15px; }
-  .catalog__descr {
+  .catalog-item__descr {
     margin-top: 15px;
     text-align: center;
     font-style: normal;
@@ -502,28 +515,28 @@
     font-size: 14px;
     line-height: 22px;
     color: #0D0D0D; }
-  .catalog__more {
+  .catalog-item__more {
     margin-top: 10px;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 14px; }
-    .catalog__more a {
+    .catalog-item__more a {
       color: #C70101;
       text-decoration: none; }
-      .catalog__more a:hover {
+      .catalog-item__more a:hover {
         text-decoration: underline; }
-  .catalog__separator {
+  .catalog-item__separator {
     margin-top: 17px;
     height: 1.8px;
     width: 263px;
     background: #E8E8E8; }
-  .catalog__wrapper {
+  .catalog-item__footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 17px; }
-  .catalog__price {
+  .catalog-item__price {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -533,7 +546,7 @@
             flex-direction: column;
     -ms-flex-item-align: start;
         align-self: flex-start; }
-  .catalog__sale {
+  .catalog-item__sale {
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -541,14 +554,14 @@
     -webkit-text-decoration-line: line-through;
             text-decoration-line: line-through;
     color: #555555; }
-  .catalog__cost {
+  .catalog-item__cost {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
     color: #050505;
     width: 127px; }
-  .catalog__button {
+  .catalog-item__button {
     color: #FFFFFF;
     font-style: normal;
     font-weight: 500;
@@ -559,7 +572,7 @@
     background: #C70101;
     border-radius: 5px;
     border: none; }
-    .catalog__button:hover {
+    .catalog-item__button:hover {
       background-color: #92010a;
       -webkit-transition: 0.3s all;
       transition: 0.3s all; }
