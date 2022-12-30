@@ -92,7 +92,7 @@
             justify-content: start
         &_active
             transform: translateX(-100%)
-            margin-left: 0px
+            margin-left: 10px
     &-item                                                 // INSIDE BLOCKS
         &__product
             font-style: normal
@@ -127,6 +127,11 @@
                 color: $site_red
                 text-decoration: underline
         &__back
+            display: block
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-40px)
             margin-top: 10px
             font-style: normal
             font-weight: 500
