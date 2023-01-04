@@ -1,0 +1,88 @@
+.hidden
+    background: rgba(0, 0, 0, 0.56)
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    z-index: 2
+    &_active
+        display: block
+.modal
+    padding-top: 35px
+    padding-left: 40px
+    padding-right: 40px
+    padding-bottom: 40px
+    min-height: 402px
+    width: 422px
+    background: #F2F2F2
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: none
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    &_active
+        display: flex
+    &__close
+        position: absolute
+        top: 0
+        right: -40px
+        font-size: 41px
+        line-height: 21px
+        color: $site_red
+        cursor: pointer
+    &__subtitle
+        text-align: center
+        font-style: normal
+        font-weight: 700
+        font-size: 19px
+        line-height: 19px
+        color: $site_black
+    &__descr
+        text-align: center
+        margin-top: 10px
+        font-style: normal
+        font-weight: 700
+        font-size: 14px
+        line-height: 14px
+        color: $site_black
+    &__btn
+        width: 302px
+        height: 56px
+        background: $site_red
+        border: none
+        border-radius: 5px
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 16px
+        color: $site_white
+        text-transform: uppercase
+        display: flex
+        justify-content: center
+        margin: 0 auto
+        align-items: center
+#thankfulness
+        min-height: 145px
+.feed-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 26px
+    input
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        color: #4b4b4b
+        width: 303px
+        height: 54px
+        border-radius: 5px
+        border: none
+        background-color: $site_white
+        padding: 0 15px 0 20px
+        margin-bottom: 15px
+        &:nth-child(3)
+            margin-bottom: 20px
