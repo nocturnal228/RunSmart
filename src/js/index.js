@@ -56,5 +56,25 @@ $('.catalog-item__button').each(function(i) {
         $('.hidden, #purchase').fadeIn('slow');
     })
 });
+
+//scrollup
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 650) {
+          $('.pageup').fadeIn();
+          } else {
+            $('.pageup').fadeOut();
+          }
+    });
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;
+        });
+      } 
+    });
 });
             

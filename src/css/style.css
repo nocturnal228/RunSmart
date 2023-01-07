@@ -6,7 +6,7 @@
   margin: 0 auto; }
 
 .promo {
-  background: url("../img/running_girl_bg.png");
+  background: url("../img/running_girl_bg.png") center center/cover no-repeat;
   width: 100%;
   min-height: 650px;
   padding-top: 21px; }
@@ -260,7 +260,7 @@
       width: 277px; }
 
 .consult {
-  background: url("../img/shoe_bg.png");
+  background: url("../img/shoe_bg.png") center center/cover no-repeat;
   padding: 100px 0; }
   .consult h2 {
     font-style: normal;
@@ -855,5 +855,20 @@
     margin-bottom: 15px; }
     .feed-form input:nth-child(3) {
       margin-bottom: 20px; }
+
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.3; }
+  .pageup img {
+    width: 100%; }
+  .pageup:hover {
+    opacity: 1;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all; }
 
 /*# sourceMappingURL=style.css.map */
